@@ -1,0 +1,15 @@
+.transition-button { /* 選擇帶有類名transition-button的元素 */
+    background-color: blue; /* 設定背景顏色為藍色 */
+    color: white; /* 設定文字顏色為白色 */
+    padding: 10px 20px; /* 設定內邊距，上下為10px，左右為20px */
+    font-size: 20px; /* 設定字體大小為20px */
+    border: none; /* 取消按鈕邊框 */
+    cursor: pointer; /* 設定滑鼠懸停時的光標為手指形狀 */
+    transition: background-color 0.5s, transform 0.5s; /* 設定背景顏色和變形的過渡時間為0.5秒 */
+  }
+  
+  .transition-button:hover { /* 選擇帶有類名transition-button的元素在滑鼠懸停時 */
+    background-color: red; /* 將背景顏色變為紅色 */
+    transform: scale(1.2); /* 將元素放大1.2倍 */
+  }
+  
