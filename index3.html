@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World!</title>
+</head>
+<body>
+	<h1>Hello, <span id="name"></span>!</h1>
+	<form>
+		<label for="name-input">Enter your name:</label>
+		<input type="text" id="name-input" name="name">
+		<button type="submit">Submit</button>
+	</form>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get('name');
+		const nameDisplay = document.querySelector('#name');
+		
+		if (name) {
+			nameDisplay.textContent = name;
+		}
+		
+		const form = document.querySelector('form');
+		const nameInput = document.querySelector('#name-input');
+		
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			const name = nameInput.value;
+			window.location.href = `index.html?name=${encodeURIComponent(name)}`;
+		});
+	</script>
+</body>
+</html>
